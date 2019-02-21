@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700,900");
+@import url("https://fonts.googleapis.com/css?family=Monoton");
+* {
+  margin: 0;
+  padding: 0; }
+
+.welcome_window {
+  background-image: url("hero_image.png");
+  height: 600px;
+  width: 100%;
+  position: relative; }
+  .welcome_window .blue_opacity {
+    position: absolute;
+    height: 600px;
+    width: 100%;
+    background-color: rgba(44, 41, 97, 0.9); }
+  .welcome_window .navbar {
+    color: white;
+    border-bottom: solid 1px #a0a0ff; }
+    .welcome_window .navbar .nav_logo .logo_text {
+      font-family: 'Monoton', cursive;
+      font-size: 30px;
+      top: 5px;
+      position: relative;
+      color: #FFA12D;
+      opacity: 0.9; }
+    .welcome_window .navbar .nav_logo img {
+      bottom: 5px;
+      position: relative;
+      margin-right: 3px; }
+    .welcome_window .navbar .nav_options {
+      float: left; }
+      .welcome_window .navbar .nav_options p {
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        position: relative;
+        top: 10px;
+        display: inline-block;
+        font-size: 15px;
+        margin-right: 10px; }
+        .welcome_window .navbar .nav_options p:hover {
+          color: #FFA12D;
+          transition: 0.5s;
+          cursor: pointer; }
+
+/*# sourceMappingURL=style.css.map */
