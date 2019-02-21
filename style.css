@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700,900");
 @import url("https://fonts.googleapis.com/css?family=Monoton");
+@import url("https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,500,600,700");
 * {
   margin: 0;
   padding: 0; }
@@ -14,24 +15,44 @@
     height: 600px;
     width: 100%;
     background-color: rgba(44, 41, 97, 0.9); }
+  .welcome_window .hero_text {
+    text-align: center;
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Raleway", sans-serif; }
+    .welcome_window .hero_text p {
+      color: #FFA12D;
+      font-size: 25px;
+      font-weight: bold;
+      letter-spacing: 4px;
+      margin-bottom: -5px; }
+    .welcome_window .hero_text h1 {
+      color: white;
+      font-weight: 200;
+      font-size: 50px;
+      letter-spacing: 1.5px; }
   .welcome_window .navbar {
     color: white;
     border-bottom: solid 1px #a0a0ff; }
-    .welcome_window .navbar .nav_logo .logo_text {
-      font-family: 'Monoton', cursive;
-      font-size: 30px;
-      top: 5px;
-      position: relative;
-      color: #FFA12D;
-      opacity: 0.9; }
-    .welcome_window .navbar .nav_logo img {
-      bottom: 5px;
-      position: relative;
-      margin-right: 3px; }
+    .welcome_window .navbar .nav_logo {
+      margin: 7px 0px; }
+      .welcome_window .navbar .nav_logo .logo_text {
+        font-family: 'Monoton', cursive;
+        font-size: 30px;
+        top: 5px;
+        position: relative;
+        color: #FFA12D;
+        opacity: 0.9; }
+      .welcome_window .navbar .nav_logo img {
+        bottom: 5px;
+        position: relative;
+        margin-right: 3px; }
     .welcome_window .navbar .nav_options {
       float: left; }
       .welcome_window .navbar .nav_options p {
-        font-family: "Roboto", sans-serif;
+        font-family: "Raleway", sans-serif;
         font-weight: 300;
         position: relative;
         top: 10px;
@@ -42,5 +63,64 @@
           color: #FFA12D;
           transition: 0.5s;
           cursor: pointer; }
+  .welcome_window .scroll_down {
+    z-index: 100;
+    position: absolute;
+    top: 88%;
+    left: 50%; }
+
+.proms {
+  margin-bottom: 60px; }
+  .proms p {
+    font-size: 33px;
+    color: #FFA12D;
+    font-family: "Raleway", sans-serif;
+    margin-top: 50px;
+    margin-bottom: -5px;
+    font-weight: 300;
+    letter-spacing: 0.6px;
+    white-space: nowrap; }
+  .proms .photo_container {
+    margin-top: 30px;
+    position: relative;
+    width: 106%; }
+  .proms .image {
+    display: block;
+    width: 100%;
+    height: auto; }
+  .proms .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+    transition: .5s ease;
+    background-color: #161430;
+    cursor: pointer; }
+    .proms .overlay:hover {
+      opacity: 0; }
+    .proms .overlay .text {
+      position: relative;
+      left: 20px;
+      top: -30px;
+      opacity: 1 !important; }
+      .proms .overlay .text .text_street {
+        color: white;
+        font-size: 25px;
+        bottom: 5px;
+        position: relative; }
+      .proms .overlay .text .line {
+        border-bottom: solid 1px #FFA12D;
+        width: 80px;
+        position: relative;
+        top: 5px; }
+      .proms .overlay .text .text_city {
+        font-size: 18px;
+        font-weight: bold;
+        position: relative;
+        top: -40px; }
 
 /*# sourceMappingURL=style.css.map */
