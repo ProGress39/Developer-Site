@@ -237,4 +237,8 @@
         background-color: #FFA12D;
         color: white; }
 
+#interactive_map {
+  height: 500px;
+  width: 100%; }
+
 /*# sourceMappingURL=style.css.map */

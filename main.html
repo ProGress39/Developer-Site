@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+   crossorigin=""/>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   </head>
   <body>
     <div class="welcome_window">
@@ -58,12 +62,12 @@
         </div>
         <div class="col-12 col-lg-4">
           <div class="photo_container">
-            <img src="http://pixelvision3d.pl/wp-content/uploads/2018/11/wizualizacja-domu-jednorodzinnego-starowa-gra-2.jpg" alt="osiedle domów Nasielsk" class="image">
+            <img src="http://pixelvision3d.pl/wp-content/uploads/2018/11/wizualizacja-domu-jednorodzinnego-starowa-gra-2.jpg" alt="osiedle domów Łomianki" class="image">
             <div class="overlay">
               <div class="text">
                 <p class="text_street">Osiedle "Pod klonami"</p>
                 <div class="line"></div>
-                <p class="text_city">Nasielsk</p>
+                <p class="text_city">Łomianki</p>
               </div>
             </div>
           </div>
@@ -82,6 +86,8 @@
         </div>
       </div>
     </div>
+
+
         <div class="container-fluid investments">
           <div class="row">
             <div class="col-12 investments_header">
@@ -94,7 +100,7 @@
                 <span class="city_number">1</span>
                 <span class="city">WOŁOMIN:</span>
                 <span class="city_number">2</span>
-                <span class="city">NASIELSK:</span>
+                <span class="city">ŁOMIANKI:</span>
                 <span class="city_number">1</span>
                 <span class="city">PIASECZNO:</span>
                 <span class="city_number">2</span>
@@ -116,7 +122,7 @@
             </div>
             <div class="col-12 col-md-6 right">
               <div class="image_container">
-                <img src="http://pixelvision3d.pl/wp-content/uploads/2018/11/wizualizacja-osiedla-azy-2.jpg" alt="osiedle domów Nasielsk" class="image">
+                <img src="http://pixelvision3d.pl/wp-content/uploads/2018/11/wizualizacja-osiedla-azy-2.jpg" alt="osiedle domów Łomianki" class="image">
                 <div class="overlay">
                   <div class="free_flats">
                     <span class="free_left">WOLNE:</span>
@@ -130,7 +136,7 @@
           <div class="row">
             <div class="col-12 col-md-6">
               <div class="image_container left">
-                <img src="https://www.eurostyl.com.pl/img/234/209/99/_original/osiedle-cytrusowe-5.jpg" alt="osiedle domów Nasielsk" class="image">
+                <img src="https://www.eurostyl.com.pl/img/234/209/99/_original/osiedle-cytrusowe-5.jpg" alt="osiedle domów Łomianki" class="image">
                 <div class="overlay">
                   <div class="free_flats">
                     <span class="free_left">WOLNE:</span>
@@ -179,13 +185,15 @@
               </div>
             </div>
           </div>
-
-
         </div>
+        <div id="interactive_map"></div>
 
 
 
 
+    <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+      integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+      crossorigin=""></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>AOS.init();</script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
