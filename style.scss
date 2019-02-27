@@ -111,13 +111,12 @@ $orange: #FFA12D;
     margin-top: 30px;
     position: relative;
     width: 106%;
-  }
+    .image {
+      display: block;
+      width: 100%;
+      height: auto;
 
-  .image {
-    display: block;
-    width: 100%;
-    height: auto;
-
+    }
   }
 
   .overlay {
@@ -161,3 +160,136 @@ $orange: #FFA12D;
     }
   }
 }
+
+/*Aktualne inwestycje*/
+.investments {
+  width: 100%;
+  height: auto;
+  background-color: #1E1D38;
+
+/*Zbliżenie do siebie bootstrapowych kolumn w większych rozdzielczościach*/
+  @media screen and (min-width: 776px) {
+    .left {
+      left: 10px;
+    }
+    .right {
+      right: 10px;
+    }
+  }
+
+/*Inwestycje nagłówek i liczba inwestycji w poszczególnych miastach*/
+  .investments_header {
+    color: $orange;
+    margin-bottom: 40px;
+    .header_title {
+      float: left;
+      margin-left: 60px;
+      margin-top: 50px;
+      .big_heading {
+       font-weight: 700;
+       font-family: $roboto;
+       font-size: 50px;
+      }
+      .smaller_heading {
+      font-family: $raleway;
+      font-size: 26px;
+      font-weight: 300;
+      margin-left: 8px;
+      letter-spacing: 0.6px;
+      }
+    }
+/*Liczba inwestycji zależnie od miasta*/
+    .header_cities {
+      float: right;
+      margin-top: 52px;
+      margin-right: 40px;
+      .city {
+        color: white;
+        font-size: 18px;
+        font-family: $raleway;
+        font-weight: 300;
+        margin-left: 50px;
+      }
+      .city_number {
+        font-size: 45px;
+        font-family: $raleway;
+        font-weight: bold;
+      }
+    }
+    @media only screen and (max-width: 1170px) {
+      .header_cities {
+        display: none;
+      }
+    }
+  }
+/*Inwestycje kafelki*/
+  .image_container {
+      position: relative;
+      width: 99%;
+      p{
+        font-size: 33px;
+        color: $orange;
+        font-family: $raleway;
+        margin-top: 50px;
+        margin-bottom: -5px;
+        font-weight: 300;
+        letter-spacing: 0.6px;
+        white-space: nowrap;
+      }
+      .image {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+      }
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      transition: .5s ease;
+      background-color: hsla(0, 0%, 0%, 0.3);
+        .free_flats {
+          text-align: center;
+          display: inline-block;
+          float: right;
+          position: relative;
+          left: -4%;
+          font-family: $raleway;
+          font-size: 15px;
+          font-weight: 500;
+          .free_left {
+            color: white;
+          }
+          .number_left {
+            color: $orange;
+            font-size: 40px;
+            font-weight: 300;
+          }
+        }
+        button {
+          position: relative;
+          top: 80%;
+          left: 5%;
+          outline: none;
+          border: solid 1px $orange;
+          background-color: hsla(0, 0%, 0%, 0.5);
+          color: $orange;
+          padding: 6px 15px;
+          border-radius: 50px;
+          font-family: $raleway;
+          cursor: pointer;
+          transition: 0.3s ease;
+          letter-spacing: 0.6px;
+          &:hover {
+            background-color: $orange;
+            color: white;
+          }
+        }
+      }
+    }

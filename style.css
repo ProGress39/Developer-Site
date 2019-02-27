@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700,900");
 @import url("https://fonts.googleapis.com/css?family=Monoton");
 @import url("https://fonts.googleapis.com/css?family=Raleway:200,200i,300,300i,400,400i,500,600,700");
@@ -84,10 +85,10 @@
     margin-top: 30px;
     position: relative;
     width: 106%; }
-  .proms .image {
-    display: block;
-    width: 100%;
-    height: auto; }
+    .proms .photo_container .image {
+      display: block;
+      width: 100%;
+      height: auto; }
   .proms .overlay {
     position: absolute;
     top: 0;
@@ -122,5 +123,113 @@
         font-weight: bold;
         position: relative;
         top: -40px; }
+
+/*Aktualne inwestycje*/
+.investments {
+  width: 100%;
+  height: auto;
+  background-color: #1E1D38;
+  /*Zbliżenie do siebie bootstrapowych kolumn w większych rozdzielczościach*/
+  /*Inwestycje nagłówek i liczba inwestycji w poszczególnych miastach*/
+  /*Inwestycje kafelki*/ }
+  @media screen and (min-width: 776px) {
+    .investments .left {
+      left: 10px; }
+    .investments .right {
+      right: 10px; } }
+  .investments .investments_header {
+    color: #FFA12D;
+    margin-bottom: 40px;
+    /*Liczba inwestycji zależnie od miasta*/ }
+    .investments .investments_header .header_title {
+      float: left;
+      margin-left: 60px;
+      margin-top: 50px; }
+      .investments .investments_header .header_title .big_heading {
+        font-weight: 700;
+        font-family: "Roboto", sans-serif;
+        font-size: 50px; }
+      .investments .investments_header .header_title .smaller_heading {
+        font-family: "Raleway", sans-serif;
+        font-size: 26px;
+        font-weight: 300;
+        margin-left: 8px;
+        letter-spacing: 0.6px; }
+    .investments .investments_header .header_cities {
+      float: right;
+      margin-top: 52px;
+      margin-right: 40px; }
+      .investments .investments_header .header_cities .city {
+        color: white;
+        font-size: 18px;
+        font-family: "Raleway", sans-serif;
+        font-weight: 300;
+        margin-left: 50px; }
+      .investments .investments_header .header_cities .city_number {
+        font-size: 45px;
+        font-family: "Raleway", sans-serif;
+        font-weight: bold; }
+    @media only screen and (max-width: 1170px) {
+      .investments .investments_header .header_cities {
+        display: none; } }
+  .investments .image_container {
+    position: relative;
+    width: 99%; }
+    .investments .image_container p {
+      font-size: 33px;
+      color: #FFA12D;
+      font-family: "Raleway", sans-serif;
+      margin-top: 50px;
+      margin-bottom: -5px;
+      font-weight: 300;
+      letter-spacing: 0.6px;
+      white-space: nowrap; }
+    .investments .image_container .image {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-bottom: 10px; }
+  .investments .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    transition: .5s ease;
+    background-color: rgba(0, 0, 0, 0.3); }
+    .investments .overlay .free_flats {
+      text-align: center;
+      display: inline-block;
+      float: right;
+      position: relative;
+      left: -4%;
+      font-family: "Raleway", sans-serif;
+      font-size: 15px;
+      font-weight: 500; }
+      .investments .overlay .free_flats .free_left {
+        color: white; }
+      .investments .overlay .free_flats .number_left {
+        color: #FFA12D;
+        font-size: 40px;
+        font-weight: 300; }
+    .investments .overlay button {
+      position: relative;
+      top: 80%;
+      left: 5%;
+      outline: none;
+      border: solid 1px #FFA12D;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #FFA12D;
+      padding: 6px 15px;
+      border-radius: 50px;
+      font-family: "Raleway", sans-serif;
+      cursor: pointer;
+      transition: 0.3s ease;
+      letter-spacing: 0.6px; }
+      .investments .overlay button:hover {
+        background-color: #FFA12D;
+        color: white; }
 
 /*# sourceMappingURL=style.css.map */
