@@ -6,11 +6,13 @@
   margin: 0;
   padding: 0; }
 
+/*Stylizowanie okna powitalnego*/
 .welcome_window {
   background-image: url("hero_image.png");
   height: 600px;
   width: 100%;
-  position: relative; }
+  position: relative;
+  /*Nagłówek*/ }
   .welcome_window .blue_opacity {
     position: absolute;
     height: 600px;
@@ -70,6 +72,7 @@
     top: 88%;
     left: 50%; }
 
+/*Sekcja z aktualnymi promocjami*/
 .proms {
   margin-bottom: 60px; }
   .proms p {
@@ -81,10 +84,13 @@
     font-weight: 300;
     letter-spacing: 0.6px;
     white-space: nowrap; }
+  @media screen and (max-width: 700px) {
+    .proms p {
+      font-size: 25px; } }
   .proms .photo_container {
     margin-top: 30px;
     position: relative;
-    width: 106%; }
+    width: 100%; }
     .proms .photo_container .image {
       display: block;
       width: 100%;
@@ -105,7 +111,7 @@
       opacity: 0; }
     .proms .overlay .text {
       position: relative;
-      left: 20px;
+      margin-left: 30px;
       top: -30px;
       opacity: 1 !important; }
       .proms .overlay .text .text_street {
@@ -237,8 +243,175 @@
         background-color: #FFA12D;
         color: white; }
 
+/*Interaktywna mapa*/
 #interactive_map {
   height: 500px;
   width: 100%; }
+
+/*Sekcja kontaktu*/
+.contact_container .contact_info {
+  margin-top: 10px; }
+  .contact_container .contact_info h4 {
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 15px; }
+  .contact_container .contact_info p {
+    margin-top: -15px;
+    font-family: "Raleway", sans-serif; }
+.contact_container .contact {
+  /*prawidłowe funkcjonowanie formularza niezależnie od przeglądarki*/
+  /*stylizowanie formularza zależnie od rozdzielczości na telefonach*/ }
+  .contact_container .contact .write_us {
+    font-family: "Roboto", sans-serif;
+    position: absolute;
+    top: 15px;
+    left: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    opacity: 0.8; }
+  .contact_container .contact input {
+    line-height: normal;
+    color: #FFA12D;
+    font: inherit;
+    margin: 0; }
+  .contact_container .contact textarea {
+    overflow: auto;
+    color: #FFA12D;
+    font: inherit;
+    margin: 0;
+    border: solid 2px #FFA12D;
+    border-radius: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    width: 100%;
+    line-height: 150%;
+    height: 50px;
+    resize: none;
+    width: 100%; }
+    .contact_container .contact textarea:focus {
+      outline: none;
+      padding: 0 0 0.875em 0; }
+  .contact_container .contact #container {
+    max-width: 768px;
+    position: relative; }
+  .contact_container .contact form {
+    padding: 37.5px; }
+  .contact_container .contact .email {
+    float: right;
+    width: 45%; }
+  .contact_container .contact input[type='text'], .contact_container .contact [type='email'] {
+    background: none;
+    border: none;
+    border: solid 2px #FFA12D;
+    border-radius: 12px;
+    color: #FFA12D;
+    font-size: 16px;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    padding: 7px 10px;
+    width: 100%; }
+  .contact_container .contact input[type='text']:focus, .contact_container .contact [type='email']:focus {
+    outline: none; }
+  .contact_container .contact .message {
+    float: none;
+    font-style: italic; }
+    .contact_container .contact .message #message_input {
+      font-style: italic;
+      height: 100px;
+      padding-left: 5px;
+      margin-top: -15px; }
+  .contact_container .contact .name {
+    float: left;
+    width: 45%; }
+  .contact_container .contact .subject {
+    width: 100%; }
+  .contact_container .contact .telephone {
+    width: 100%; }
+  .contact_container .contact ::-webkit-input-placeholder {
+    color: #FFA12D; }
+  .contact_container .contact :-moz-placeholder {
+    color: #FFA12D;
+    opacity: 1; }
+  .contact_container .contact ::-moz-placeholder {
+    color: #FFA12D;
+    opacity: 1; }
+  .contact_container .contact :-ms-input-placeholder {
+    color: #FFA12D; }
+  .contact_container .contact #form_button {
+    background-color: #FFA12D;
+    color: white;
+    opacity: 0.9;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.875em;
+    font-weight: bold;
+    outline: none;
+    padding: 7px 20px;
+    text-transform: uppercase;
+    border: solid 1px #FFA12D;
+    border-radius: 15px;
+    font-weight: 300; }
+    .contact_container .contact #form_button:hover {
+      color: #FFA12D;
+      background-color: white; }
+  @media screen and (max-width: 768px) {
+    .contact_container .contact #container {
+      margin: 20px auto;
+      width: 95%; } }
+  @media screen and (max-width: 480px) {
+    .contact_container .contact .underline {
+      width: 68px; }
+    .contact_container .contact #form_button {
+      padding: 15px 25px; } }
+  @media screen and (max-width: 420px) {
+    .contact_container .contact .underline {
+      width: 53px; }
+    .contact_container .contact input[type='text'], .contact_container .contact [type='email'], .contact_container .contact select, .contact_container .contact textarea {
+      font-size: 0.875em; } }
+
+/*ostatnia sekcja z adresami, inwestycjami i video*/
+.last_section_background {
+  background-color: #2C2961; }
+  .last_section_background .last_section {
+    color: white; }
+    .last_section_background .last_section .info {
+      margin-top: 40px; }
+      .last_section_background .last_section .info h4 {
+        font-family: "Roboto", sans-serif;
+        margin-bottom: 15px; }
+      .last_section_background .last_section .info p {
+        margin-top: -15px;
+        font-family: "Raleway", sans-serif;
+        opacity: 0.5; }
+    .last_section_background .last_section button {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      left: 30px;
+      padding: 2px 60px;
+      outline: none;
+      border: solid 2px #FFA12D;
+      border-radius: 40px;
+      background-color: #2C2961;
+      color: rgba(255, 255, 255, 0.8);
+      cursor: pointer;
+      font-family: "Raleway", sans-serif;
+      font-size: 14px;
+      transition: 0.5s; }
+      .last_section_background .last_section button:hover {
+        background-color: #FFA12D; }
+    .last_section_background .last_section .invests {
+      margin-top: 40px; }
+      .last_section_background .last_section .invests h5 {
+        font-family: "Roboto", sans-serif; }
+      .last_section_background .last_section .invests img {
+        margin: 4px;
+        cursor: pointer; }
+        .last_section_background .last_section .invests img:hover {
+          opacity: 0.8; }
+    .last_section_background .last_section iframe {
+      margin-top: 30px;
+      height: 300px;
+      width: 100%; }
 
 /*# sourceMappingURL=style.css.map */

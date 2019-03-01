@@ -6,12 +6,12 @@ $roboto: 'Roboto', sans-serif;
 $raleway: 'Raleway', sans-serif;
 $orange: #FFA12D;
 
-
 * {
   margin: 0;
   padding: 0;
 }
 
+/*Stylizowanie okna powitalnego*/
 .welcome_window {
   background-image: url('hero_image.png');
   height: 600px;
@@ -23,7 +23,6 @@ $orange: #FFA12D;
     width: 100%;
     background-color: rgba(44, 41, 97, 0.9);
   }
-
   .hero_text {
     text-align: center;
     position: absolute;
@@ -45,7 +44,7 @@ $orange: #FFA12D;
       letter-spacing: 1.5px;
     }
   }
-
+/*Nagłówek*/
   .navbar {
     color: white;
     border-bottom: solid 1px rgb(160,160,255);
@@ -75,7 +74,6 @@ $orange: #FFA12D;
         display: inline-block;
         font-size: 15px;
         margin-right: 10px;
-
         &:hover {
           color: #FFA12D;
           transition: 0.5s;
@@ -84,7 +82,6 @@ $orange: #FFA12D;
       }
     }
   }
-
   .scroll_down {
     z-index: 100;
     position: absolute;
@@ -93,7 +90,7 @@ $orange: #FFA12D;
   }
 }
 
-
+/*Sekcja z aktualnymi promocjami*/
 .proms{
    margin-bottom: 60px;
    p{
@@ -106,19 +103,21 @@ $orange: #FFA12D;
      letter-spacing: 0.6px;
      white-space: nowrap;
    }
-
+   @media screen and (max-width: 700px) {
+     p{
+       font-size: 25px;
+     }
+   }
   .photo_container {
     margin-top: 30px;
     position: relative;
-    width: 106%;
+    width: 100%;
     .image {
       display: block;
       width: 100%;
       height: auto;
-
     }
   }
-
   .overlay {
     position: absolute;
     top: 0;
@@ -136,7 +135,7 @@ $orange: #FFA12D;
     }
     .text{
       position: relative;
-      left: 20px;
+      margin-left: 30px;
       top: -30px;
       opacity: 1!important;
       .text_street {
@@ -166,7 +165,6 @@ $orange: #FFA12D;
   width: 100%;
   height: auto;
   background-color: #1E1D38;
-
 /*Zbliżenie do siebie bootstrapowych kolumn w większych rozdzielczościach*/
   @media screen and (min-width: 776px) {
     .left {
@@ -176,7 +174,6 @@ $orange: #FFA12D;
       right: 12px;
     }
   }
-
 /*Inwestycje nagłówek i liczba inwestycji w poszczególnych miastach*/
   .investments_header {
     color: $orange;
@@ -243,7 +240,6 @@ $orange: #FFA12D;
         margin-bottom: 10px;
       }
     }
-
     .overlay {
       position: absolute;
       top: 0;
@@ -301,7 +297,223 @@ $orange: #FFA12D;
       }
     }
 
+/*Interaktywna mapa*/
  #interactive_map {
    height: 500px;
    width: 100%;
  }
+
+/*Sekcja kontaktu*/
+.contact_container {
+  .contact_info {
+    margin-top: 10px;
+   h4 {
+     font-family: $roboto;
+     margin-bottom: 15px;
+   }
+   p {
+     margin-top: -15px;
+     font-family: $raleway;
+   }
+  }
+  .contact {
+    .write_us {
+      font-family: $roboto;
+      position: absolute;
+      top: 15px;
+      left: 50px;
+      font-weight: bold;
+      font-size: 20px;
+      opacity: 0.8;
+    }
+    input {
+      line-height: normal;
+      color: $orange;
+      font: inherit;
+      margin: 0;
+    }
+    textarea {
+      overflow: auto;
+      color: $orange;
+      font: inherit;
+      margin: 0;
+      border: solid 2px $orange;
+      border-radius: 12px;
+      font-weight: 400;
+      letter-spacing: 1px;
+   	 width: 100%;
+      line-height: 150%;
+    	 height: 50px;
+    	 resize: none;
+      width: 100%;
+      &:focus {
+       outline: none;
+      	padding: 0 0 0.875em 0;
+      }
+    }
+  #container {
+    max-width: 768px;
+    position: relative;
+  }
+  form {
+    padding: 37.5px;
+  }
+  .email {
+  	float: right;
+  	width: 45%;
+  }
+  input[type='text'], [type='email'] {
+  	background: none;
+   border: none;
+  	border: solid 2px $orange;
+   border-radius: 12px;
+  	color: $orange;
+  	font-size: 16px;
+   font-weight: 400;
+   font-style: italic;
+   letter-spacing: 1px;
+  	margin-bottom: 10px;
+  	padding: 7px 10px;
+  	width: 100%;
+  }
+  input[type='text']:focus, [type='email']:focus {
+  	outline: none;
+  }
+  .message {
+  	float: none;
+   font-style: italic;
+    #message_input {
+      font-style: italic;
+      height: 100px;
+      padding-left: 5px;
+      margin-top: -15px;
+    }
+  }
+  .name {
+  	float: left;
+  	width: 45%;
+  }
+  .subject {
+    width: 100%;
+  }
+  .telephone {
+    width: 100%;
+  }
+  /*prawidłowe funkcjonowanie formularza niezależnie od przeglądarki*/
+  ::-webkit-input-placeholder {
+    color: $orange;
+  }
+  :-moz-placeholder {
+  	color: $orange;
+    opacity: 1;
+  }
+  ::-moz-placeholder {
+  	color: $orange;
+  	opacity: 1;
+  }
+  :-ms-input-placeholder {
+    color: $orange;
+  }
+  #form_button {
+    background-color: $orange;
+    color: white;
+    opacity: 0.9;
+    cursor: pointer;
+    font-family: $roboto;
+    font-size: 0.875em;
+    font-weight: bold;
+    outline: none;
+    padding: 7px 20px;
+    text-transform: uppercase;
+    border: solid 1px $orange;
+    border-radius: 15px;
+    font-weight: 300;
+    &:hover {
+      color: $orange;
+      background-color: white;
+    }
+  }
+
+  /*stylizowanie formularza zależnie od rozdzielczości na telefonach*/
+  @media screen and (max-width: 768px) {
+    #container {
+      margin: 20px auto;
+      width: 95%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .underline {
+      width: 68px;
+    }
+    #form_button {
+      padding: 15px 25px;
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    .underline {
+      width: 53px;
+    }
+    input[type='text'], [type='email'], select, textarea {
+      font-size: 0.875em;
+    }
+  }
+  }
+}
+
+/*ostatnia sekcja z adresami, inwestycjami i video*/
+.last_section_background{
+  background-color: #2C2961;
+  .last_section {
+    color: white;
+    .info {
+      margin-top: 40px;
+      h4 {
+        font-family: $roboto;
+        margin-bottom: 15px;
+      }
+      p {
+        margin-top: -15px;
+        font-family: $raleway;
+        opacity: 0.5;
+      }
+    }
+    button {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      left: 30px;
+      padding: 2px 60px;
+      outline: none;
+      border: solid 2px $orange;
+      border-radius: 40px;
+      background-color: #2C2961;
+      color: hsla(0, 0%, 100%, 0.8);
+      cursor: pointer;
+      font-family: $raleway;
+      font-size: 14px;
+      transition: 0.5s;
+      &:hover {
+        background-color: $orange;
+      }
+    }
+    .invests {
+      margin-top: 40px;
+      h5 {
+        font-family: $roboto;
+      }
+      img {
+        margin: 4px;
+        cursor: pointer;
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+    iframe {
+      margin-top: 30px;
+      height: 300px;
+      width: 100%;
+    }
+  }
+}

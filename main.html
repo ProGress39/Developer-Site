@@ -11,11 +11,13 @@
    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
    crossorigin=""/>
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+   <link rel="shortcut icon" type="image/x-icon" href="icon.png" />
   </head>
   <body>
-    <div class="welcome_window">
-      <div class="blue_opacity">
-      </div>
+
+    <!--Obraz powitalny razem z nagłówkiem-->
+    <div class="welcome_window" id="welcome">
+      <div class="blue_opacity"></div>
       <div class="navbar">
         <div class="nav_logo">
           <img src="https://partner.microsoft.com/-/media/mssc/mpn/partner/solutions/images/simplehero_sideimage_400x225_onedrive.ashx" alt="logo" height="40px" width="70px" />
@@ -27,7 +29,6 @@
           <p>WYSZUKIWARKA</p>
           <p>ZREALIZOWANE</p>
           <p>FINANSOWANIE</p>
-          <p>MIESZKANIA POD KLUCZ</p>
           <p>DEWELOPER</p>
           <p>KONTAKT</p>
         </div>
@@ -41,6 +42,7 @@
       </a>
     </div>
 
+    <!--Sekcja z aktualnymi promocjami, 3 kafelki inwestycji-->
     <div class="container proms" id="proms">
       <div class="row">
         <div class="col-12">
@@ -87,109 +89,196 @@
       </div>
     </div>
 
-
-        <div class="container-fluid investments">
-          <div class="row">
-            <div class="col-12 investments_header">
-              <div class="header_title">
-                <span class="big_heading">NASZE</span>
-                <span class="smaller_heading">INWESTYCJE</span>
-              </div>
-              <div class="header_cities">
-                <span class="city">SIEDLCE:</span>
-                <span class="city_number">1</span>
-                <span class="city">WOŁOMIN:</span>
-                <span class="city_number">2</span>
-                <span class="city">ŁOMIANKI:</span>
-                <span class="city_number">1</span>
-                <span class="city">PIASECZNO:</span>
-                <span class="city_number">2</span>
-              </div>
-            </div>
+   <!--Sekcja z aktualnymi, wszystkimi ofertami-->
+    <div class="container-fluid investments" id="invests">
+      <div class="row">
+        <div class="col-12 investments_header">
+          <div class="header_title">
+            <span class="big_heading">NASZE</span>
+            <span class="smaller_heading">INWESTYCJE</span>
           </div>
-          <div class="row">
-            <div class="col-12 col-md-6">
-              <div class="image_container left">
-                <img src="http://pixelvision3d.pl/wp-content/uploads/2018/11/wizualizacja-osiedla-azy-1.jpg" alt="Warszawska 141 osiedle" class="image">
-                <div class="overlay" onmouseover="showButton()">
-                  <div class="free_flats">
-                    <span class="free_left">WOLNE:</span>
-                    <span class="number_left">10</span>
-                  </div>
-                  <button class="more_info">Więcej informacji</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 right">
-              <div class="image_container">
-                <img src="http://pixelvision3d.pl/wp-content/uploads/2018/11/wizualizacja-osiedla-azy-2.jpg" alt="osiedle domów Łomianki" class="image">
-                <div class="overlay">
-                  <div class="free_flats">
-                    <span class="free_left">WOLNE:</span>
-                    <span class="number_left">1</span>
-                  </div>
-                  <button class="more_info">Więcej informacji</button>
-                </div>
-              </div>
-            </div>
+          <div class="header_cities">
+            <span class="city">SIEDLCE:</span>
+            <span class="city_number">1</span>
+            <span class="city">WOŁOMIN:</span>
+            <span class="city_number">2</span>
+            <span class="city">ŁOMIANKI:</span>
+            <span class="city_number">1</span>
+            <span class="city">PIASECZNO:</span>
+            <span class="city_number">2</span>
           </div>
-          <div class="row">
-            <div class="col-12 col-md-6">
-              <div class="image_container left">
-                <img src="https://www.eurostyl.com.pl/img/234/209/99/_original/osiedle-cytrusowe-5.jpg" alt="osiedle domów Łomianki" class="image">
-                <div class="overlay">
-                  <div class="free_flats">
-                    <span class="free_left">WOLNE:</span>
-                    <span class="number_left">10</span>
-                  </div>
-                  <button class="more_info">Więcej informacji</button>
-                </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="image_container left">
+            <img src="http://pixelvision3d.pl/wp-content/uploads/2018/11/wizualizacja-osiedla-azy-1.jpg" alt="Warszawska 141 osiedle" class="image">
+            <div class="overlay" onmouseover="showButton()">
+              <div class="free_flats">
+                <span class="free_left">WOLNE:</span>
+                <span class="number_left">10</span>
               </div>
-            </div>
-            <div class="col-12 col-md-6">
-              <div class="image_container right">
-                <img src="https://fourdesign.pl/uploads/documents/projects/49/images/05_Osiedle%20Kmicica%20Lodz.jpg" alt="osiedle domów Nasielsk" class="image">
-                <div class="overlay">
-                  <div class="free_flats">
-                    <span class="free_left">WOLNE:</span>
-                    <span class="number_left">5</span>
-                  </div>
-                  <button class="more_info">Więcej informacji</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-12 col-md-6 left">
-              <div class="image_container">
-                <img src="https://fourdesign.pl/uploads/documents/projects/49/images/02_Osiedle%20Kmicica%20Lodz.jpg" alt="osiedle domów Nasielsk" class="image">
-                <div class="overlay">
-                  <div class="free_flats">
-                    <span class="free_left">WOLNE:</span>
-                    <span class="number_left">4</span>
-                  </div>
-                  <button class="more_info">Więcej informacji</button>
-                </div>
-              </div>
-            </div>
-            <div class="col-12 col-md-6">
-              <div class="image_container right">
-                <img src="http://pixelvision3d.pl/wp-content/uploads/2018/11/wizualizacja-domu-jednorodzinnego-starowa-gra-2.jpg" alt="osiedle domów Nasielsk" class="image">
-                <div class="overlay">
-                  <div class="free_flats">
-                    <span class="free_left">WOLNE:</span>
-                    <span class="number_left">0</span>
-                  </div>
-                  <button class="more_info">Więcej informacji</button>
-                </div>
-              </div>
+              <button class="more_info">Więcej informacji</button>
             </div>
           </div>
         </div>
-        <div id="interactive_map"></div>
+        <div class="col-12 col-md-6 right">
+          <div class="image_container">
+            <img src="http://pixelvision3d.pl/wp-content/uploads/2018/11/wizualizacja-osiedla-azy-2.jpg" alt="osiedle domów Łomianki" class="image">
+            <div class="overlay">
+              <div class="free_flats">
+                <span class="free_left">WOLNE:</span>
+                <span class="number_left">1</span>
+              </div>
+              <button class="more_info">Więcej informacji</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <div class="image_container left">
+            <img src="https://www.eurostyl.com.pl/img/234/209/99/_original/osiedle-cytrusowe-5.jpg" alt="osiedle domów Łomianki" class="image">
+            <div class="overlay">
+              <div class="free_flats">
+                <span class="free_left">WOLNE:</span>
+                <span class="number_left">10</span>
+              </div>
+              <button class="more_info">Więcej informacji</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="image_container right">
+            <img src="https://fourdesign.pl/uploads/documents/projects/49/images/05_Osiedle%20Kmicica%20Lodz.jpg" alt="osiedle domów Nasielsk" class="image">
+            <div class="overlay">
+              <div class="free_flats">
+                <span class="free_left">WOLNE:</span>
+                <span class="number_left">5</span>
+              </div>
+              <button class="more_info">Więcej informacji</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-6 left">
+          <div class="image_container">
+            <img src="https://fourdesign.pl/uploads/documents/projects/49/images/02_Osiedle%20Kmicica%20Lodz.jpg" alt="osiedle domów Nasielsk" class="image">
+            <div class="overlay">
+              <div class="free_flats">
+                <span class="free_left">WOLNE:</span>
+                <span class="number_left">4</span>
+              </div>
+              <button class="more_info">Więcej informacji</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="image_container right">
+            <img src="http://pixelvision3d.pl/wp-content/uploads/2018/11/wizualizacja-domu-jednorodzinnego-starowa-gra-2.jpg" alt="osiedle domów Nasielsk" class="image">
+            <div class="overlay">
+              <div class="free_flats">
+                <span class="free_left">WOLNE:</span>
+                <span class="number_left">0</span>
+              </div>
+              <button class="more_info">Więcej informacji</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!--Miejsce na interaktywną mapę-->
+    <div id="interactive_map"></div>
 
+    <!--Sekcja z adresem, telefonami i formularzem kontaktowym-->
+    <div class="container contact_container">
+      <div class="row">
+        <div class="col-12 col-lg-4 contact_info">
+            <h4>PHU DEV Sp.j.:</h4>
+            <p>ul. Śmieszna 30</p>
+            <p>12-345 Warszawa</p>
+            <p>tel. +12 34 567 81 01</p>
+            <p>fax. +12 34 515 12 22</p>
+            <p>biuro@devdev.pl</p>
+            <h4>Dział sprzedaży</h4>
+            <p>tel. +12 34 412 55 11</p>
+            <p>fax. +12 22 111 44 55</p>
+            <p>mieszkania@devdev.pl</p>
+            <h4>Dział reklamacji</h4>
+            <p>tel. +12 34 621 13 12</p>
+            <p>fax. +12 33 221 55 12</p>
+            <p>reklamacja@devdev.pl</p>
+        </div>
 
+        <!--Formułka kontaktu-->
+        <div class="col-12 col-lg-8 contact" id="contact">
+          <p class="write_us">Napisz do nas</p>
+          <div id="container">
+            <form action="#" method="post" id="contact_form">
+              <div class="name">
+                <label for="name"></label>
+                <input type="text" placeholder="Imię i nazwisko" name="name" id="name_input" required>
+              </div>
+              <div class="email">
+                <label for="email"></label>
+                <input type="email" placeholder="E-mail" name="email" id="email_input" required>
+              </div>
+              <div class="telephone">
+                <label for="name"></label>
+                <input type="text" placeholder="Temat" name="telephone" id="telephone_input" required>
+             </div>
+             <div class="message">
+               <label for="message"></label>
+               <textarea name="message" placeholder="Treść wiadomości" id="message_input" cols="30" rows="5" required></textarea>
+             </div>
+             <div class="submit">
+               <input type="submit" value="Wyślij" id="form_button" />
+             </div>
+           </form>
+         </div>
+       </div>
+     </div>
+   </div>
+
+   <!--Ostatnia sekcja-->
+   <div class="last_section_background">
+   <div class="container last_section">
+     <div class="row">
+       <div class="col-12 col-sm-4">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.027053297444!2d21.05521131523249!3d52.24289226448153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTLCsDE0JzM0LjQiTiAyMcKwMDMnMjYuNiJF!5e0!3m2!1spl!2spl!4v1551435832607" frameborder="0" style="border:0" allowfullscreen></iframe>
+       </div>
+       <div class="col-12 col-sm-4 info">
+         <h4>PHU DEV Sp.j.:</h4>
+         <p>ul. Śmieszna 30</p>
+         <p>12-345 Warszawa</p>
+         <p>tel. +12 34 567 81 01</p>
+         <p>fax. +12 34 515 12 22</p>
+         <p>biuro@devdev.pl</p>
+         <h4>Dział sprzedaży</h4>
+         <p>tel. +12 34 412 55 11</p>
+         <p>fax. +12 22 111 44 55</p>
+         <p>mieszkania@devdev.pl</p>
+       </div>
+       <div class="col-12 col-sm-4 invests">
+         <h5>INWESTYCJE</h5>
+         <a href="#invests">
+         <img src="http://pixelvision3d.pl/wp-content/uploads/2018/11/wizualizacja-osiedla-azy-1.jpg" height="55px" width="95px" />
+         <img src="http://pixelvision3d.pl/wp-content/uploads/2018/11/wizualizacja-osiedla-azy-2.jpg" height="55px" width="95px" />
+         <img src="https://www.eurostyl.com.pl/img/234/209/99/_original/osiedle-cytrusowe-5.jpg" height="55px" width="95px" />
+         <img src="https://fourdesign.pl/uploads/documents/projects/49/images/05_Osiedle%20Kmicica%20Lodz.jpg" height="55px" width="95px" />
+         <img src="https://fourdesign.pl/uploads/documents/projects/49/images/02_Osiedle%20Kmicica%20Lodz.jpg" height="55px" width="95px" />
+         <img src="http://pixelvision3d.pl/wp-content/uploads/2018/11/wizualizacja-domu-jednorodzinnego-starowa-gra-2.jpg" height="55px" width="95px" />
+       </a>
+       </div>
+     </div>
+     <div class="row">
+       <div class="col-12 scroll_up">
+         <center><a href="#welcome"><button class="scroll_up">↑↑↑</button></a></center>
+       </div>
+   </div>
+ </div>
 
     <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
       integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
